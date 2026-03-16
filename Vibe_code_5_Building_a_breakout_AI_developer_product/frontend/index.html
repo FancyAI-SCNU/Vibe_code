@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Software Dev Starter</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Modern Software Dev Starter</h1>
+
+      <section>
+        <h2>Notes</h2>
+        
+        <!-- 搜索区域 -->
+        <div class="search-container">
+          <div class="search-box">
+            <input 
+              id="search-input" 
+              type="text" 
+              placeholder="🔍 搜索笔记..." 
+              class="search-input"
+            />
+            <button id="search-btn" class="btn-primary">搜索</button>
+            <button id="clear-btn" class="btn-secondary">清除</button>
+          </div>
+          <div id="search-status" class="search-status"></div>
+        </div>
+
+        <!-- 标签云 -->
+        <div class="tag-cloud-container">
+          <h3>标签</h3>
+          <div id="tag-cloud" class="tag-cloud"></div>
+        </div>
+
+        <!-- 创建笔记表单 -->
+        <form id="note-form">
+          <input id="note-title" placeholder="Title" required />
+          <input id="note-content" placeholder="Content" required />
+          <button type="submit">Add</button>
+        </form>
+        
+        <ul id="notes"></ul>
+      </section>
+
+      <section>
+        <h2>Action Items</h2>
+        <form id="action-form">
+          <input id="action-desc" placeholder="Description" required />
+          <button type="submit">Add</button>
+        </form>
+        <ul id="actions"></ul>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

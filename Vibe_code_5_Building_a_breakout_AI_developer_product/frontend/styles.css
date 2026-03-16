@@ -1,0 +1,279 @@
+body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;margin:0;padding:0;background:#fafafa;color:#111}
+main{max-width:900px;margin:2rem auto;padding:0 1rem}
+h1{font-size:1.8rem}
+section{background:#fff;border:1px solid #eee;border-radius:8px;padding:1rem;margin:1rem 0}
+form{display:flex;gap:.5rem;margin-bottom:.5rem}
+input{flex:1;padding:.5rem;border:1px solid #ccc;border-radius:4px}
+button{padding:.5rem .8rem;border:1px solid #ccc;border-radius:4px;background:#f5f5f5;cursor:pointer}
+ul{list-style:disc;padding-left:1.25rem}
+
+/* 搜索容器样式 */
+.search-container{
+  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius:12px;
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  animation:slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn{
+  from{opacity:0;transform:translateY(-10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.search-box{
+  display:flex;
+  gap:.75rem;
+  align-items:center;
+}
+
+.search-input{
+  flex:1;
+  padding:.75rem 1rem;
+  border:2px solid transparent;
+  border-radius:8px;
+  font-size:1rem;
+  background:#fff;
+  transition:all 0.3s ease;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-input:focus{
+  outline:none;
+  border-color:#667eea;
+  box-shadow:0 4px 12px rgba(102,126,234,0.3);
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  padding:.75rem 1.5rem;
+  background:#fff;
+  color:#667eea;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover{
+  background:#f0f0f0;
+  transform:translateY(-2px);
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-primary:active{
+  transform:translateY(0);
+}
+
+.btn-secondary{
+  padding:.75rem 1.5rem;
+  background:rgba(255,255,255,0.2);
+  color:#fff;
+  border:2px solid #fff;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.3);
+  transform:translateY(-2px);
+}
+
+/* 搜索状态提示 */
+.search-status{
+  margin-top:1rem;
+  padding:.75rem 1rem;
+  border-radius:6px;
+  font-size:0.9rem;
+  font-weight:500;
+  text-align:center;
+  animation:fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.search-status.loading{
+  background:rgba(255,255,255,0.9);
+  color:#667eea;
+}
+
+.search-status.success{
+  background:rgba(255,255,255,0.9);
+  color:#10b981;
+}
+
+.search-status.error{
+  background:rgba(255,255,255,0.9);
+  color:#ef4444;
+}
+
+.search-status.warning{
+  background:rgba(255,255,255,0.9);
+  color:#f59e0b;
+}
+
+.search-status.info{
+  background:rgba(255,255,255,0.9);
+  color:#3b82f6;
+}
+
+/* 搜索结果高亮 */
+mark{
+  background:#fef08a;
+  color:#854d0e;
+  padding:2px 4px;
+  border-radius:3px;
+  font-weight:600;
+}
+
+/* 无结果提示 */
+.no-results{
+  color:#6b7280;
+  font-style:italic;
+  text-align:center;
+  padding:2rem;
+}
+
+/* 笔记列表增强 */
+#notes li{
+  padding:.75rem;
+  margin:.5rem 0;
+  background:#f9fafb;
+  border-radius:6px;
+  transition:all 0.2s ease;
+}
+
+#notes li:hover{
+  background:#f3f4f6;
+  transform:translateX(4px);
+}
+
+/* 标签云容器 */
+.tag-cloud-container{
+  background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius:12px;
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  animation:slideIn 0.3s ease-out;
+}
+
+.tag-cloud-container h3{
+  margin:0 0 1rem 0;
+  color:#fff;
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+.tag-cloud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+}
+
+.no-tags{
+  color:rgba(255,255,255,0.8);
+  font-style:italic;
+  margin:0;
+}
+
+/* 标签按钮样式 */
+.tag-btn{
+  padding:.6rem 1.2rem;
+  background:rgba(255,255,255,0.95);
+  color:#f5576c;
+  border:2px solid transparent;
+  border-radius:20px;
+  font-weight:600;
+  font-size:0.9rem;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+.tag-btn:hover{
+  background:#fff;
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+}
+
+.tag-btn:active{
+  transform:translateY(0) scale(1);
+}
+
+.tag-btn.active{
+  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color:#fff;
+  border-color:#fff;
+  box-shadow:0 4px 12px rgba(102,126,234,0.4);
+}
+
+.tag-count{
+  background:rgba(245,87,108,0.2);
+  color:#f5576c;
+  padding:.2rem .5rem;
+  border-radius:10px;
+  font-size:0.8rem;
+  font-weight:700;
+}
+
+.tag-btn.active .tag-count{
+  background:rgba(255,255,255,0.3);
+  color:#fff;
+}
+
+/* 笔记项样式 */
+.note-item{
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+}
+
+.note-content{
+  flex:1;
+}
+
+/* 笔记中的标签样式 */
+.note-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-top:.5rem;
+}
+
+.tag{
+  display:inline-block;
+  padding:.3rem .7rem;
+  background:linear-gradient(135deg, #e0f2fe 0%, #ddd6fe 100%);
+  color:#4338ca;
+  border-radius:12px;
+  font-size:0.85rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s ease;
+  border:1px solid transparent;
+}
+
+.tag:hover{
+  background:linear-gradient(135deg, #bae6fd 0%, #c4b5fd 100%);
+  transform:translateY(-1px);
+  box-shadow:0 2px 4px rgba(67,56,202,0.2);
+}
+
+.tag.active{
+  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color:#fff;
+  border-color:#667eea;
+  box-shadow:0 2px 6px rgba(102,126,234,0.3);
+}
